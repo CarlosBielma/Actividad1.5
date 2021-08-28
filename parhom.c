@@ -2,7 +2,7 @@
 #include "omp.h"
 static long num_pasos=100000000;
 double paso;
-#define NUM_THREADS 160
+#define NUM_THREADS 170
 void main()
 {
     int i, nthreads; double pi, sum[NUM_THREADS],t1,t2,tiempo;
@@ -27,7 +27,7 @@ for(i=0, pi=0.0; i<nthreads;i++){
 }
     const double endTime = omp_get_wtime();
     tiempo=t2-t1;
-    printf("pi = (%lf\n",pi);
+    printf("resultado = (%lf\n",pi);
     printf("tomo (%lf) segundos\n",(endTime - startTime));
 }
 
